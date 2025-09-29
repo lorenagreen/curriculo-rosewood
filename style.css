@@ -1,9 +1,69 @@
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#064E3B;
-  color:#F4F1EB;
-  text-align:center;
-  padding-top:20vh;
+:root{
+  --rw-green:#064E3B;
+  --rw-gold:#B98D4A;
+  --rw-sand:#F4F1EB;
+  --rw-charcoal:#1E1E1E;
 }
-h1{color:#B98D4A;}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:'Lato', sans-serif;
+  background:var(--rw-sand);
+  color:var(--rw-charcoal);
+  line-height:1.6;
+}
+.hero{
+  background:var(--rw-green) url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1350&q=60') center/cover no-repeat;
+  color:var(--rw-sand);
+  text-align:center;
+  padding:20vh 1rem;
+}
+.hero h1{
+  font-family:'Playfair Display', serif;
+  font-size:3rem;
+  color:var(--rw-gold);
+  margin-bottom:1rem;
+}
+.btn{
+  display:inline-block;
+  margin-top:1rem;
+  padding:.75rem 1.5rem;
+  background:var(--rw-gold);
+  color:#fff;
+  text-decoration:none;
+  border-radius:4px;
+  transition:background .3s;
+}
+.btn:hover{
+  background:#9c6f3a;
+}
+.timeline, .competencias, .contato{
+  padding:3rem 1rem;
+  max-width:900px;
+  margin:auto;
+}
+.timeline-item{
+  display:flex;
+  gap:1rem;
+  margin-bottom:2rem;
+}
+.year{
+  flex:0 0 100px;
+  font-weight:700;
+  color:var(--rw-gold);
+}
+.skills{
+  list-style:none;
+}
+.skills li{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:.5rem;
+}
+@media(max-width:600px){
+  .timeline-item{flex-direction:column;}
+  .hero h1{font-size:2.2rem;}
+}

@@ -1,69 +1,65 @@
-:root{
-  --rw-green:#064E3B;
-  --rw-gold:#B98D4A;
-  --rw-sand:#F4F1EB;
-  --rw-charcoal:#1E1E1E;
-}
+/* ----- CHIQUE MINIMAL ----- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300&display=swap');
+
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 body{
-  font-family:'Lato', sans-serif;
-  background:var(--rw-sand);
-  color:var(--rw-charcoal);
-  line-height:1.6;
+  font-family:'Inter', sans-serif;
+  background:#000;
+  color:#f5f5f5;
 }
 .hero{
-  background:var(--rw-green) url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1350&q=60') center/cover no-repeat;
-  color:var(--rw-sand);
+  height:100vh;                     /* ocupa tela inteira */
+  background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1350&q=70')
+    center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding:20vh 1rem;
+  padding:2rem;
 }
 .hero h1{
   font-family:'Playfair Display', serif;
-  font-size:3rem;
-  color:var(--rw-gold);
+  font-size:4.5rem;
+  color:#d4af37;   /* dourado clássico */
+  letter-spacing:3px;
   margin-bottom:1rem;
+}
+.hero p{
+  font-size:1.2rem;
+  margin-bottom:2rem;
+  opacity:.85;
 }
 .btn{
   display:inline-block;
-  margin-top:1rem;
-  padding:.75rem 1.5rem;
-  background:var(--rw-gold);
-  color:#fff;
+  padding:1rem 2rem;
+  border:2px solid #d4af37;
+  color:#d4af37;
   text-decoration:none;
-  border-radius:4px;
-  transition:background .3s;
+  transition:.3s;
 }
 .btn:hover{
-  background:#9c6f3a;
+  background:#d4af37;
+  color:#000;
 }
 .timeline, .competencias, .contato{
-  padding:3rem 1rem;
-  max-width:900px;
+  padding:4rem 2rem;
+  max-width:800px;
   margin:auto;
 }
-.timeline-item{
-  display:flex;
-  gap:1rem;
-  margin-bottom:2rem;
+h2{
+  font-family:'Playfair Display', serif;
+  font-size:2.2rem;
+  color:#d4af37;
+  margin-bottom:1.5rem;
 }
-.year{
-  flex:0 0 100px;
-  font-weight:700;
-  color:var(--rw-gold);
-}
-.skills{
-  list-style:none;
-}
-.skills li{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:.5rem;
-}
+.year{color:#d4af37; font-weight:bold;}
+.skills li{ margin-bottom:.5rem; }
 @media(max-width:600px){
-  .timeline-item{flex-direction:column;}
-  .hero h1{font-size:2.2rem;}
+  .hero h1{font-size:3rem;}
 }
